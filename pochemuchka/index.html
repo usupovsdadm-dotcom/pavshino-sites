@@ -1,0 +1,60 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>Почемучка — студия раннего развития и логопед, Подмосковный б-р, 9</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{--y:#ffc93c;--b:#3a6df0;--p:#ff6b9a;--g:#28c2a0;--ink:#1d2742;--bg:#fbf8f1}
+*{box-sizing:border-box;margin:0}body{background:var(--bg);color:var(--ink);font:600 17px/1.6 Nunito,sans-serif;overflow-x:hidden}a{color:inherit}
+.demo{position:fixed;bottom:10px;right:10px;z-index:99;background:var(--ink);color:var(--y);font-size:12px;padding:6px 12px;border-radius:10px}
+nav{position:fixed;top:12px;left:12px;right:12px;z-index:40;display:flex;justify-content:space-between;align-items:center;padding:10px 14px 10px 20px;background:#fff;border-radius:20px;box-shadow:0 10px 30px #1d274214}
+nav b{font:800 20px Unbounded}nav b span{color:var(--b)}
+.btn{display:inline-block;background:var(--b);color:#fff;font:800 16px Nunito;padding:14px 24px;border-radius:16px;text-decoration:none;border:0;cursor:pointer;transition:.2s}.btn:hover{background:var(--p);transform:rotate(-2deg) scale(1.04)}
+.hero{position:relative;height:100svh;min-height:620px;overflow:hidden;display:grid;place-items:center;text-align:center}
+#q{position:absolute;inset:0;width:100%;height:100%}
+.hero .in{position:relative;z-index:2;padding:0 6vw;pointer-events:none}.hero .in a{pointer-events:auto}
+.hero h1{font:800 clamp(52px,10vw,150px)/.95 Unbounded;letter-spacing:-.03em}
+.hero h1 .qm{display:inline-block;color:var(--p);animation:sw 1.8s ease-in-out infinite;transform-origin:50% 90%}@keyframes sw{50%{transform:rotate(18deg)}}
+.hero p{font-size:clamp(19px,2vw,24px);max-width:30ch;margin:18px auto 26px}
+.chip{display:inline-block;background:#fff;border:2px solid var(--ink);border-radius:99px;padding:8px 16px;font-weight:800;margin-bottom:14px}
+.sec{padding:14vh 6vw}.sec h2{font:800 clamp(34px,5vw,70px)/1.05 Unbounded;letter-spacing:-.03em;margin-bottom:40px}
+.flip{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fc{perspective:900px;height:260px;cursor:pointer}.fc .in{position:relative;width:100%;height:100%;transition:transform .7s cubic-bezier(.3,1.4,.5,1);transform-style:preserve-3d}.fc:hover .in,.fc.fl .in{transform:rotateY(180deg)}
+.fc .f,.fc .bk{position:absolute;inset:0;backface-visibility:hidden;border-radius:30px;padding:28px;display:flex;flex-direction:column;justify-content:space-between}
+.fc .f{color:#fff}.fc .f b{font:800 64px Unbounded}.fc .f h3{font:800 22px Unbounded}
+.fc .bk{background:#fff;border:3px solid var(--ink);transform:rotateY(180deg)}.fc .bk b{font:800 26px Unbounded;color:var(--b)}
+.snd{background:var(--ink);color:#fff;border-radius:50px;margin:0 3vw;padding:12vh 6vw;position:relative;overflow:hidden}
+.letters{display:flex;flex-wrap:wrap;gap:14px;margin-top:20px}.letters span{font:800 clamp(40px,6vw,80px) Unbounded;width:1.5em;height:1.5em;display:grid;place-items:center;border-radius:28px;background:#ffffff12;transition:.3s;cursor:default}
+.letters span:hover{background:var(--y);color:var(--ink);transform:translateY(-10px) rotate(-6deg)}
+.ph{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}.ph img{border-radius:40px;width:100%;aspect-ratio:3/4;object-fit:cover;border:6px solid #fff;box-shadow:0 20px 40px #1d274222;rotate:2deg}
+.new{display:inline-flex;gap:10px;align-items:center;background:var(--y);padding:10px 18px;border-radius:14px;font-weight:800}
+form{display:grid;gap:12px;background:#fff;border-radius:30px;padding:30px;box-shadow:0 20px 50px #1d274214}input,select{font:700 17px Nunito;padding:16px;border-radius:14px;border:2px solid #e6e0d2}
+iframe{width:100%;height:340px;border:0;border-radius:30px;margin-top:20px}
+footer{padding:30px 6vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:14px;opacity:.7}
+.rv{opacity:0;transform:translateY(40px) rotate(2deg);transition:.7s}.rv.on{opacity:1;transform:none}
+@media(max-width:860px){.flip,.ph{grid-template-columns:1fr}.fc{height:200px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+<div class="demo">демо-концепт · не опубликован</div>
+<nav><b>Почему<span>чка</span></b><a class="btn" href="tel:+79253390093">Позвонить</a></nav>
+<header class="hero"><canvas id="q"></canvas><div class="in"><span class="chip">студия раннего развития · логопед</span><h1>Почему<span class="qm">?</span><br>Потому что<br>интересно!</h1><p>Отвечаем на все «почему» и ставим звуки играючи. Подмосковный бульвар, 9.</p><a class="btn" href="#join">Записаться на пробное</a></div></header>
+<section class="sec"><h2>Наведите<br>на вопрос →</h2><div class="flip">
+<div class="fc rv"><div class="in"><div class="f" style="background:var(--b)"><b>?</b><h3>Почему ребёнок не выговаривает «Р»?</h3></div><div class="bk"><p>Занятия с логопедом</p><b>от … ₽</b><small>цена-пример</small></div></div></div>
+<div class="fc rv"><div class="in"><div class="f" style="background:var(--p)"><b>?</b><h3>Как готовиться к школе без слёз?</h3></div><div class="bk"><p>Подготовка к школе</p><b>от … ₽</b><small>цена-пример</small></div></div></div>
+<div class="fc rv"><div class="in"><div class="f" style="background:var(--g)"><b>?</b><h3>Чем занять малыша с пользой?</h3></div><div class="bk"><p>Раннее развитие</p><b>от … ₽</b><small>цена-пример</small></div></div></div>
+<div class="fc rv"><div class="in"><div class="f" style="background:var(--y);color:var(--ink)"><b>?</b><h3>А с чего начать?</h3></div><div class="bk"><p>Диагностика речи</p><b>от … ₽</b><small>цена-пример</small></div></div></div>
+<div class="fc rv"><div class="in"><div class="f" style="background:var(--ink)"><b>?</b><h3>Можно сначала попробовать?</h3></div><div class="bk"><p>Пробное занятие</p><b>от … ₽</b><small>цена-пример</small></div></div></div>
+<div class="fc rv"><div class="in"><div class="f" style="background:var(--b)"><b>?</b><h3>А если ходить регулярно?</h3></div><div class="bk"><p>Абонемент</p><b>от … ₽</b><small>цена-пример</small></div></div></div></div></section>
+<section class="snd"><h2>Звуки, которые<br>мы приручаем</h2><div class="letters"><span>Р</span><span>Л</span><span>Ш</span><span>Ж</span><span>С</span><span>З</span><span>Ч</span><span>Щ</span></div><p style="margin-top:20px;opacity:.7">Иллюстрация направлений — состав программ уточним у студии.</p></section>
+<section class="sec ph" id="join"><div><img class="rv" src="photo.jpg" alt="Вход в студию (фото 2ГИС)"></div><div><span class="new">✨ Новое место в 2ГИС — отзывов пока нет</span><h2 style="margin-top:20px">Приходите знакомиться</h2><p>Работаем по предварительной записи. Красногорск, Подмосковный бульвар, 9, 1 этаж.<br><a href="tel:+79253390093"><b>+7 925 339-00-93</b></a> · <a href="https://t.me/obraz_krasnogorsk">Telegram</a> · <a href="https://vk.com/po4emy4ka.poima">VK</a> · <a href="https://2gis.ru/krasnogorsk/firm/70000001061289894">2ГИС</a></p>
+<form onsubmit="event.preventDefault();this.innerHTML='<h3>Спасибо! Это демо — заявка не отправлена.</h3>'" style="margin-top:20px"><input placeholder="Имя" required><input placeholder="Возраст ребёнка"><input type="tel" placeholder="Телефон" required><button class="btn">Записаться</button></form>
+<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%2C%20%D0%9F%D0%BE%D0%B4%D0%BC%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D0%BD%D1%8B%D0%B9%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%209&z=17" title="Карта"></iframe></div></section>
+<footer><span>© Почемучка</span><span>Фото — 2ГИС · цены и тексты — демо</span></footer>
+<script>const S=/shot/.test(location.search)||matchMedia('(prefers-reduced-motion: reduce)').matches;
+const c=document.getElementById('q'),x=c.getContext('2d');let W,H,ps=[],m={x:-999,y:-999};const C=['#ffc93c','#3a6df0','#ff6b9a','#28c2a0'];
+function rs(){W=c.width=c.offsetWidth*devicePixelRatio;H=c.height=c.offsetHeight*devicePixelRatio}rs();addEventListener('resize',rs);
+const N=innerWidth<700?16:34;for(let i=0;i<N;i++)ps.push({x:Math.random()*W,y:Math.random()*H,s:(30+Math.random()*70)*devicePixelRatio,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6,r:Math.random()*6,vr:(Math.random()-.5)*.01,c:C[i%4],ch:i%3?'?':'!'});
+c.parentElement.addEventListener('pointermove',e=>{const b=c.getBoundingClientRect();m.x=(e.clientX-b.left)*devicePixelRatio;m.y=(e.clientY-b.top)*devicePixelRatio});
+function d(){x.clearRect(0,0,W,H);ps.forEach(p=>{if(!S){const dx=p.x-m.x,dy=p.y-m.y,dd=Math.hypot(dx,dy);if(dd<200*devicePixelRatio){p.vx+=dx/dd*.3;p.vy+=dy/dd*.3}p.vx*=.98;p.vy*=.98;p.x+=p.vx+Math.sin(p.r)*.2;p.y+=p.vy;p.r+=p.vr;if(p.x<-100)p.x=W+50;if(p.x>W+100)p.x=-50;if(p.y<-100)p.y=H+50;if(p.y>H+100)p.y=-50}
+x.save();x.translate(p.x,p.y);x.rotate(Math.sin(p.r)*.5);x.globalAlpha=.85;x.fillStyle=p.c;x.font=`800 ${p.s}px Unbounded`;x.textAlign='center';x.fillText(p.ch,0,0);x.restore()});if(!S)requestAnimationFrame(d)}
+document.fonts.ready.then(d);d();
+document.querySelectorAll('.fc').forEach(f=>f.onclick=()=>f.classList.toggle('fl'));
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.2});document.querySelectorAll('.rv').forEach((r,i)=>{r.style.transitionDelay=(i%3)*.1+'s';S?r.classList.add('on'):io.observe(r)});</script></body></html>

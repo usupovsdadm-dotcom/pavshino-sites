@@ -1,0 +1,48 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<title>БарберКлаб — барбершоп на Красногорском бульваре, 19</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Alice&family=Oswald:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--n:#14213a;--n2:#1b2b4a;--r:#c9302c;--c:#f2e8d8;--gd:#c9a96a}
+*{box-sizing:border-box;margin:0}body{background:var(--n);color:var(--c);font:18px/1.6 Alice,serif;overflow-x:hidden}a{color:inherit}
+.demo{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:99;background:var(--c);color:var(--n);font:12px Oswald;padding:4px 12px;letter-spacing:.1em}
+.cap{font:500 13px Oswald;letter-spacing:.3em;text-transform:uppercase;color:var(--gd)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 5vw;border-bottom:1px solid #f2e8d822}
+nav .b{font:900 italic 26px 'Playfair Display'}
+.hero{display:grid;grid-template-columns:1fr 200px 1fr;gap:4vw;align-items:center;padding:8vh 5vw;min-height:88svh}
+.hero h1{font:900 clamp(60px,8vw,128px)/.9 'Playfair Display';text-align:right}.hero h1 i{color:var(--r)}
+.pole{height:min(70vh,560px);width:110px;margin:auto;position:relative}
+.pole .g{position:absolute;inset:40px 14px;border-radius:40px;overflow:hidden;border:4px solid var(--gd);background:repeating-linear-gradient(-45deg,var(--r) 0 26px,#fff 26px 52px,var(--n2) 52px 78px,#fff 78px 104px);background-size:100% 147px;animation:pl 2.2s linear infinite}
+@keyframes pl{to{background-position:0 147px}}.pole::before,.pole::after{content:"";position:absolute;left:4px;right:4px;height:46px;background:linear-gradient(90deg,#8a7346,var(--gd),#8a7346);border-radius:50% 50% 10px 10px}.pole::before{top:0}.pole::after{bottom:0;border-radius:10px 10px 50% 50%}
+.hero .r p{font-size:22px;max-width:30ch;margin:20px 0}.hero img{width:100%;max-width:360px;aspect-ratio:3/4;object-fit:cover;border:8px solid var(--c);box-shadow:0 0 0 1px var(--gd),20px 20px 0 var(--r);rotate:3deg}
+.btn{display:inline-block;padding:16px 30px;background:var(--r);color:#fff;font:500 15px Oswald;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;transition:.3s}.btn:hover{background:var(--c);color:var(--n)}
+.seal{display:inline-grid;place-content:center;text-align:center;width:130px;height:130px;border-radius:50%;border:2px dashed var(--gd);font:900 40px/1 'Playfair Display';margin-top:20px}.seal small{font:12px Oswald;letter-spacing:.15em;color:var(--gd)}
+.sec{padding:14vh 5vw}.sec h2{font:900 clamp(44px,6vw,90px)/1 'Playfair Display';text-align:center;margin:14px 0 50px}.ctr{text-align:center}
+.tix{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1150px;margin:auto}
+.tk{background:var(--c);color:var(--n);padding:34px 28px;position:relative;text-align:center;transition:transform .4s;-webkit-mask:radial-gradient(circle 14px at 0 50%,#0000 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 14px at 100% 50%,#0000 98%,#000) right/51% 100% no-repeat}
+.tk:hover{transform:translateY(-8px) rotate(-1deg)}.tk h3{font:700 26px 'Playfair Display'}.tk .p{font:900 34px 'Playfair Display';color:var(--r);margin-top:10px;border-top:2px dashed #14213a44;padding-top:14px}.tk small{font:12px Oswald;letter-spacing:.15em;opacity:.6}
+.quote{background:var(--r);color:#fff;padding:14vh 5vw;text-align:center;font:italic 700 clamp(30px,4vw,60px)/1.2 'Playfair Display'}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:5vw}.visit iframe{width:100%;height:100%;min-height:420px;border:8px solid var(--c)}
+form{display:grid;gap:14px;margin-top:24px}input,select{background:transparent;border:1px solid var(--gd);color:var(--c);padding:16px;font:18px Alice}select option{color:#000}
+footer{border-top:1px solid #f2e8d822;padding:30px 5vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:14px}
+.rv{opacity:0;transform:translateY(40px);transition:1s}.rv.on{opacity:1;transform:none}
+@media(max-width:860px){.hero{grid-template-columns:1fr;text-align:center}.hero h1{text-align:center}.pole{height:240px;width:80px;order:-1}.hero img{margin:auto}.tix,.visit{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+<div class="demo">ДЕМО-КОНЦЕПТ · НЕ ОПУБЛИКОВАН</div>
+<nav><span class="b">БарберКлаб</span><a class="btn" href="tel:+79303334285">Записаться</a></nav>
+<header class="hero"><div><span class="cap">est. · Красногорский б-р, 19</span><h1 class="rv">Клуб<br>для <i>настоящих</i><br>мужчин</h1></div>
+<div class="pole" aria-hidden="true"><div class="g"></div></div>
+<div class="r rv"><img src="photo.jpg" alt="Стрижка в БарберКлаб (фото 2ГИС)"><p>Классика мужского груминга в клубной атмосфере — в сердце Павшинской поймы.</p><a class="btn" href="tel:+79303334285">+7 930 333-42-85</a><br><div class="seal">4.0<small>2ГИС · 7 оценок</small></div></div></header>
+<section class="sec"><p class="cap ctr">— меню клуба —</p><h2>Услуги</h2><div class="tix">
+<div class="tk rv"><small>№ 01</small><h3>Мужская стрижка</h3><div class="p">от … ₽</div><small>цена-пример</small></div>
+<div class="tk rv"><small>№ 02</small><h3>Оформление бороды</h3><div class="p">от … ₽</div><small>цена-пример</small></div>
+<div class="tk rv"><small>№ 03</small><h3>Стрижка + борода</h3><div class="p">от … ₽</div><small>цена-пример</small></div>
+<div class="tk rv"><small>№ 04</small><h3>Стрижка машинкой</h3><div class="p">от … ₽</div><small>цена-пример</small></div>
+<div class="tk rv"><small>№ 05</small><h3>Королевское бритьё</h3><div class="p">от … ₽</div><small>цена-пример</small></div>
+<div class="tk rv"><small>№ 06</small><h3>Детская стрижка</h3><div class="p">от … ₽</div><small>цена-пример</small></div></div></section>
+<section class="quote rv">«Хорошая стрижка — это не услуга.<br>Это членство в клубе.»</section>
+<section class="sec visit"><div><span class="cap">Запись</span><h2 style="text-align:left">Ваше кресло ждёт</h2><p>Красногорск, Красногорский бульвар, 19 · Павшинская пойма<br>Телефон: <a href="tel:+79303334285">+7 930 333-42-85</a> · <a href="https://2gis.ru/krasnogorsk/firm/70000001059602964">2ГИС</a></p>
+<form onsubmit="event.preventDefault();this.innerHTML='<p class=cap>Демо — заявка не отправлена</p>'"><input placeholder="Имя" required><input type="tel" placeholder="Телефон" required><select><option>Мужская стрижка</option><option>Борода</option><option>Комплекс</option></select><button class="btn">Записаться</button></form></div>
+<iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%2C%20%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%2019&z=17" title="Карта"></iframe></section>
+<footer><span>© БарберКлаб</span><span>Фото — 2ГИС · цены и тексты — демо</span></footer>
+<script>const S=/shot/.test(location.search)||matchMedia('(prefers-reduced-motion: reduce)').matches;const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.2});document.querySelectorAll('.rv').forEach((r,i)=>{r.style.transitionDelay=(i%3)*.15+'s';S?r.classList.add('on'):io.observe(r)});</script></body></html>
