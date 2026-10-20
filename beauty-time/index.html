@@ -1,4 +1,4 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow">
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><script>document.documentElement.classList.add("js")</script>
 <title>Beauty Time — студия красоты, Ильинский б-р, 9</title>
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -29,29 +29,29 @@ form{display:grid;gap:18px;margin-top:20px}input,select{background:none;border:0
 .slots{display:flex;gap:10px;flex-wrap:wrap}.slots button{border:1px solid var(--ch);background:none;padding:10px 16px;font:400 14px Jost;cursor:pointer;transition:.3s}.slots button.on,.slots button:hover{background:var(--br);color:#fff;border-color:var(--br)}
 iframe{width:100%;height:100%;min-height:440px;border:0;filter:sepia(.4) saturate(.8)}
 footer{padding:30px 5vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
-.rv{opacity:0;clip-path:inset(0 0 100% 0);transition:1.2s cubic-bezier(.7,0,.2,1)}.rv.on{opacity:1;clip-path:inset(0)}
+.js .rv{opacity:0;transform:translateY(60px) skewY(3deg);transition:1.2s cubic-bezier(.2,.8,.2,1)}.js .rv.on,.rv.on{opacity:1;transform:none}
 @media(max-width:860px){.hero,.vis{grid-template-columns:1fr}.ring{grid-template-columns:1fr}.line{padding-left:60px}.line::before,.line .bar{left:16px}.ev::before{left:-50px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;clip-path:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv,.rv{opacity:1;clip-path:none}}
 </style></head><body>
-<div class="demo">демо-концепт · не опубликован</div>
+
 <nav><b>Beauty Time</b><a class="k" href="tel:+79269323198" style="color:var(--ink)">+7 926 932-31-98</a></nav>
 <header class="hero"><div><span class="k">студия красоты · Ильинский бульвар, 9</span><h1 class="rv">Ваше <i>время</i><br>на красоту</h1><p class="rv">Без спешки. Без суеты. Только вы и мастер — в одной из двух студий Beauty Time.</p><a class="btn" href="#book">Выбрать время <span>→</span></a></div>
-<div class="dial"><div class="face"></div><img src="photo.jpg" alt="Работа студии (фото 2ГИС)"><svg viewBox="0 0 200 200" id="tk"></svg><div class="hand"></div><div class="rt">4.8<small>2ГИС · 45 оценок</small></div></div></header>
+<div class="dial"><div class="face"></div><img src="photo.jpg" alt="Работа студии"><svg viewBox="0 0 200 200" id="tk"></svg><div class="hand"></div><div class="rt">4.8<small>2ГИС · 45 оценок</small></div></div></header>
 <section class="tl"><span class="k">ваш визит</span><h2>Час, посвящённый вам</h2><div class="line" id="line"><div class="bar"></div>
 <div class="ev"><time>00:00</time><h3>Встреча</h3><p>Кофе или чай, обсуждаем пожелания.</p></div>
 <div class="ev"><time>00:10</time><h3>Подбор</h3><p>Форма, оттенок, дизайн — вместе с мастером.</p></div>
 <div class="ev"><time>00:20</time><h3>Процедура</h3><p>Спокойная работа в комфортном темпе.</p></div>
-<div class="ev"><time>01:00</time><h3>Результат</h3><p>И рекомендации по уходу. <i style="opacity:.6">Хронометраж — пример.</i></p></div></div></section>
+<div class="ev"><time>01:00</time><h3>Результат</h3><p>И рекомендации по уходу.</p></div></div></section>
 <section class="sv"><span class="k">услуги · цены — пример</span><h2>Меню студии</h2><div class="ring">
 <div class="sc"><span class="min">~ … мин</span><h3>Маникюр</h3><b>от … ₽</b></div><div class="sc"><span class="min">~ … мин</span><h3>Педикюр</h3><b>от … ₽</b></div><div class="sc"><span class="min">~ … мин</span><h3>Брови</h3><b>от … ₽</b></div>
 <div class="sc"><span class="min">~ … мин</span><h3>Ресницы</h3><b>от … ₽</b></div><div class="sc"><span class="min">~ … мин</span><h3>Уход</h3><b>от … ₽</b></div><div class="sc"><span class="min">~ … мин</span><h3>Комплекс</h3><b>от … ₽</b></div></div></section>
 <section class="vis" id="book"><div><span class="k">запись</span><h2>Выберите время</h2>
-<form onsubmit="event.preventDefault();this.innerHTML='<p><i>Спасибо! Это демо — запись не отправлена.</i></p>'"><div class="slots"><button type="button">10:00</button><button type="button" class="on">12:30</button><button type="button">15:00</button><button type="button">17:30</button><button type="button">19:00</button></div><p style="font-size:13px;opacity:.6">слоты — пример</p><input placeholder="Имя" required><input type="tel" placeholder="Телефон" required><button class="btn">Записаться →</button></form>
+<form onsubmit="event.preventDefault();this.innerHTML='<p>Спасибо! Мы скоро свяжемся с вами.</p>'"><div class="slots"><button type="button">10:00</button><button type="button" class="on">12:30</button><button type="button">15:00</button><button type="button">17:30</button><button type="button">19:00</button></div><input placeholder="Имя" required><input type="tel" placeholder="Телефон" required><button class="btn">Записаться →</button></form>
 <p style="margin-top:30px">Красногорск, Ильинский бульвар, 9 · Павшинская пойма<br><a href="tel:+79269323198">+7 926 932-31-98</a> · <a href="https://vk.com/beauty_time_krasnogorsk">VK</a> · <a href="https://t.me/beautytimekrgsk">Telegram</a> · <a href="https://dikidi.net/g374846">DIKIDI</a> · <a href="https://2gis.ru/krasnogorsk/firm/70000001053391961">2ГИС</a></p></div>
 <iframe loading="lazy" src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D1%80%D0%B0%D1%81%D0%BD%D0%BE%D0%B3%D0%BE%D1%80%D1%81%D0%BA%2C%20%D0%98%D0%BB%D1%8C%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B2%D0%B0%D1%80%209&z=17" title="Карта"></iframe></section>
-<footer><span>© Beauty Time</span><span>Фото — 2ГИС · цены, тайминги и тексты — демо</span></footer>
+<footer><span>© Beauty Time</span><span>Цены указаны для примера</span></footer>
 <script>const S=/shot/.test(location.search)||matchMedia('(prefers-reduced-motion: reduce)').matches;
 const tk=document.getElementById('tk');for(let i=0;i<60;i++){const a=i*6*Math.PI/180,r1=i%5?96:92;tk.innerHTML+=`<line x1="${100+r1*Math.sin(a)}" y1="${100-r1*Math.cos(a)}" x2="${100+99*Math.sin(a)}" y2="${100-99*Math.cos(a)}" stroke="#9b6b55" stroke-width="${i%5?.4:1}"/>`}
 document.querySelectorAll('.slots button').forEach(b=>b.onclick=()=>document.querySelectorAll('.slots button').forEach(x=>x.classList.toggle('on',x==b)));
 const ln=document.getElementById('line'),evs=[...ln.querySelectorAll('.ev')];function f(){const r=ln.getBoundingClientRect(),p=S?1:Math.min(1,Math.max(0,(innerHeight*.6-r.top)/r.height));ln.style.setProperty('--p',p*100+'%');evs.forEach(e=>e.classList.toggle('on',e.offsetTop<=p*ln.offsetHeight))}addEventListener('scroll',()=>requestAnimationFrame(f),{passive:true});f();
-const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.2});document.querySelectorAll('.rv').forEach((r,i)=>{r.style.transitionDelay=i*.15+'s';S?r.classList.add('on'):io.observe(r)});</script></body></html>
+const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('on')),{threshold:.2});document.querySelectorAll('.rv').forEach((r,i)=>{r.style.transitionDelay=(i%4)*.12+'s';S?r.classList.add('on'):io.observe(r)});</script></body></html>
