@@ -1,0 +1,71 @@
+from common import *
+o=D[13];R=rating(o)
+css='''
+:root{--pk:#ffb5e6;--pk2:#ff8fd6;--deep:#2a0f22;--cr:#fff6fb;--k:#140910}
+body{background:var(--cr);color:var(--deep);font:400 17px/1.6 Montserrat,sans-serif}
+.serif{font-family:Prata,serif;font-weight:400}
+nav{position:fixed;inset:14px 14px auto;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:10px 12px 10px 18px;border-radius:999px;background:rgba(255,246,251,.55);backdrop-filter:blur(18px) saturate(1.6);-webkit-backdrop-filter:blur(18px) saturate(1.6);border:1px solid rgba(255,255,255,.7);box-shadow:0 10px 40px -20px #a0336f}
+.lg{display:flex;align-items:center;gap:10px;font:600 13px Montserrat;letter-spacing:.3em}.lg img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;background:var(--deep);color:#fff;text-decoration:none;font:600 14px Montserrat;letter-spacing:.06em;border:0;cursor:pointer;position:relative;overflow:hidden;transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.pill::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s}.pill:hover::after{transform:translateX(120%)}
+.pill.l{background:#fff;color:var(--deep)}
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;background:radial-gradient(120% 90% at 70% 20%,#ffd9f1,#ffb5e6 45%,#f58fcf)}
+#gl{position:absolute;inset:0;width:100%;height:100%}
+.hero .in{position:relative;z-index:2;text-align:center;padding:120px 6vw 80px}
+.hero h1{font:400 clamp(70px,15vw,230px)/.86 Prata;letter-spacing:-.03em;color:#fff;text-shadow:0 2px 0 #ff9fdb,0 30px 60px rgba(120,20,80,.35)}
+.hero h1 em{display:block;font-style:italic;color:var(--deep);text-shadow:none;font-size:.62em}
+.hero p{font-size:clamp(17px,1.8vw,21px);max-width:34ch;margin:24px auto 30px;color:var(--deep)}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+.chip{background:rgba(255,255,255,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid #fff;border-radius:999px;padding:9px 16px;font-size:13px;font-weight:600}
+.drop{position:absolute;border-radius:50%;background:radial-gradient(circle at 30% 25%,#fff 0 8%,rgba(255,255,255,.0) 20%),radial-gradient(circle at 60% 70%,#ff6fc8,#d23c98);box-shadow:inset -10px -16px 30px rgba(120,0,70,.35),0 30px 50px -20px rgba(150,20,90,.6);z-index:1}
+.sw{padding:clamp(80px,12vw,160px) 6vw;background:var(--cr)}
+.sw h2,.rv2 h2,.vis h2{font:400 clamp(40px,6.4vw,96px)/.95 Prata;letter-spacing:-.02em}.sw h2 em,.vis h2 em{font-style:italic;color:#d23c98}
+.bottles{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:60px}
+.bt{border-radius:34px;padding:26px;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;color:#fff;isolation:isolate;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.bt::before{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.65),rgba(255,255,255,0) 35%),var(--c);z-index:-1}
+.bt::after{content:"";position:absolute;width:40%;height:140%;top:-20%;left:-60%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.6),transparent);transform:rotate(20deg);transition:left .9s}
+.bt:hover{transform:translateY(-10px) rotate(-1deg)}.bt:hover::after{left:130%}
+.bt h3{font:400 28px/1.05 Prata}.bt span{font-size:13px;letter-spacing:.12em;text-transform:uppercase;opacity:.9}
+.rv2{background:var(--deep);color:#ffe6f5;padding:clamp(80px,12vw,160px) 6vw;border-radius:60px 60px 0 0}
+.rv2 h2{color:#fff}.score{display:flex;align-items:baseline;gap:20px;margin:20px 0 50px;flex-wrap:wrap}.score b{font:400 clamp(90px,14vw,200px)/.8 Prata;background:linear-gradient(120deg,#fff,#ffb5e6,#ff6fc8,#fff);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 6s linear infinite}@keyframes sh{to{background-position:200%}}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.q{margin:0;padding:30px;border-radius:30px;background:linear-gradient(160deg,rgba(255,255,255,.1),rgba(255,255,255,.02));border:1px solid rgba(255,181,230,.25)}
+.q blockquote{font:400 18px/1.6 Montserrat;margin:14px 0}.q .st{color:var(--pk);letter-spacing:4px}.q figcaption{opacity:.6;font-size:13px}
+.vis{display:grid;grid-template-columns:1fr 1fr;gap:5vw;padding:clamp(80px,12vw,160px) 6vw;background:var(--deep);color:#ffe6f5}
+.vis h2{color:#fff}.hr{list-style:none;padding:0;margin:30px 0}.hr li{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid rgba(255,181,230,.25);font-size:18px}
+form{display:grid;gap:12px;margin-top:20px}form input,form select{font:500 16px Montserrat;padding:18px 20px;border-radius:20px;border:1px solid rgba(255,181,230,.35);background:rgba(255,255,255,.06);color:#fff}form select option{color:#000}
+.so{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.so a{padding:12px 18px;border-radius:999px;border:1px solid rgba(255,181,230,.4);text-decoration:none;font-size:14px;transition:.3s}.so a:hover{background:var(--pk);color:var(--deep)}
+.mapw{border-radius:36px;overflow:hidden;min-height:420px}.mapw iframe{width:100%;height:100%;min-height:420px;border:0;display:block}
+footer{background:var(--k);color:#c99bb6;padding:30px 6vw;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px}
+@supports (animation-timeline: view()){.bt{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 40%}@keyframes rise{from{transform:translateY(80px) rotate(4deg);opacity:.2}to{transform:none;opacity:1}}}
+@media(max-width:900px){.bottles{grid-template-columns:1fr 1fr}.cards,.vis{grid-template-columns:1fr}.bt{min-height:240px}}
+@media(max-width:480px){.hero h1{font-size:27vw}.drop{transform:scale(.5)}.drop:nth-of-type(1){left:-6%!important;top:12%!important}.bottles{gap:12px}.bt{padding:18px;border-radius:24px}.bt h3{font-size:21px}nav .pill{padding:12px 16px}}
+'''
+cols=['#ff6fc8','#f7a1d6','#d23c98','#ffc9e8']
+svc=[('Аппаратный маникюр','маникюр'),('Покрытие гель-лаком','стойкий блеск'),('Женский педикюр','педикюр'),('Мужской маникюр','для него'),('Брови','оформление'),('Ресницы','оформление')]
+bot=''.join(f'<div class="bt rv" style="--c:{cols[i%4]}"><span>{b} · по записи</span><h3>{a}</h3></div>' for i,(a,b) in enumerate(svc[:4]))
+html=head(o,'PINK CODE — студия маникюра, Красногорский бульвар, 18','family=Prata&family=Montserrat:wght@400;500;600;700',css)+f'''
+<nav><span class="lg"><img src="logo.jpg" alt="Логотип PINK CODE">PINK CODE</span><a class="pill" data-mag href="#visit">Записаться</a></nav>
+<header class="hero"><canvas id="gl" aria-hidden="true"></canvas>
+<span class="drop" style="width:120px;height:120px;left:8%;top:22%"></span><span class="drop" style="width:70px;height:70px;right:12%;top:18%"></span><span class="drop" style="width:180px;height:180px;right:6%;bottom:10%"></span>
+<div class="in"><h1>Pink<em>code</em></h1><p>Студия маникюра на Красногорском бульваре. Безупречная форма, зеркальный блеск и время только для вас.</p>
+<a class="pill" data-mag href="#visit">Выбрать время</a> <a class="pill l" data-mag href="tel:{o['tel']}">{E(o['phone'])}</a>
+<div class="chips"><span class="chip">★ {R} · {o['cnt']} оценки в 2ГИС</span><span class="chip">Ежедневно 9:00–21:00</span><span class="chip">Красногорский б-р, 18</span></div></div></header>
+<section class="sw"><h2 class="rv">Ваш оттенок<br><em>идеального</em> маникюра</h2><div class="bottles">{bot}</div>
+<p style="margin-top:30px;opacity:.65">А ещё — брови и ресницы. Стоимость подскажем при записи.</p></section>
+<section class="rv2"><h2 class="rv">Нас любят<br>за детали</h2><div class="score"><b>{R}</b><span>{o['cnt']} оценки гостей<br>в 2ГИС</span></div>
+<div class="cards">{revs(o,'<figure class="q rv"><div class="st">★★★★★</div><blockquote>«{t}»</blockquote><figcaption>{n} · отзыв в 2ГИС</figcaption></figure>')}</div></section>
+<section class="vis" id="visit"><div><h2 class="rv">Ждём<br><em>в гости</em></h2><p style="margin-top:20px">{E(o['addr'])}</p><ul class="hr">{hrs(o,'<li><span>{d}</span><b>{h}</b></li>')}</ul>
+<form {form_attr()}><input aria-label="Имя" placeholder="Ваше имя" required><input aria-label="Телефон" type="tel" placeholder="Телефон" required><select aria-label="Услуга"><option>Маникюр</option><option>Маникюр + покрытие</option><option>Педикюр</option><option>Брови / ресницы</option></select><button class="pill l" data-mag>{btn_label(o)}</button></form>
+<div class="so">{socials(o)}</div></div><div class="mapw rv">{map_iframe(o)}</div></section>
+<footer><span>© PINK CODE · студия маникюра</span><span>Стоимость услуг уточняйте при записи</span></footer>
+<script>(function(){{var c=document.getElementById('gl'),g=c.getContext('webgl',{{premultipliedAlpha:false}});if(!g||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var vs='attribute vec2 p;void main(){{gl_Position=vec4(p,0.,1.);}}',fs='precision mediump float;uniform vec2 r;uniform float t;uniform vec2 m;void main(){{vec2 u=(gl_FragCoord.xy-.5*r)/min(r.x,r.y);u+=m*.15;float a=0.;for(float i=1.;i<6.;i++){{u+=vec2(.6/i*sin(i*u.y+t*.35+.3*i),.6/i*cos(i*u.x+t*.3+.5*i));}}a=.5+.5*sin(u.x+u.y);vec3 c1=vec3(1.,.71,.9),c2=vec3(1.,.44,.78),c3=vec3(1.,.95,.98);vec3 col=mix(c1,c2,a);col=mix(col,c3,pow(.5+.5*sin(u.x*2.-t*.2),8.));gl_FragColor=vec4(col,1.);}}';
+function sh(t,s){{var x=g.createShader(t);g.shaderSource(x,s);g.compileShader(x);return x}}var pr=g.createProgram();g.attachShader(pr,sh(g.VERTEX_SHADER,vs));g.attachShader(pr,sh(g.FRAGMENT_SHADER,fs));g.linkProgram(pr);g.useProgram(pr);
+var b=g.createBuffer();g.bindBuffer(g.ARRAY_BUFFER,b);g.bufferData(g.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),g.STATIC_DRAW);var l=g.getAttribLocation(pr,'p');g.enableVertexAttribArray(l);g.vertexAttribPointer(l,2,g.FLOAT,false,0,0);
+var ur=g.getUniformLocation(pr,'r'),ut=g.getUniformLocation(pr,'t'),um=g.getUniformLocation(pr,'m'),mx=0,my=0,tx=0,ty=0,dpr=Math.min(devicePixelRatio,innerWidth<700?1:1.5);
+function rs(){{c.width=c.offsetWidth*dpr;c.height=c.offsetHeight*dpr;g.viewport(0,0,c.width,c.height)}}rs();addEventListener('resize',rs);addEventListener('pointermove',function(e){{tx=e.clientX/innerWidth-.5;ty=.5-e.clientY/innerHeight}});
+var vis=true;new IntersectionObserver(function(e){{vis=e[0].isIntersecting}}).observe(c);
+(function f(t){{if(vis){{mx+=(tx-mx)*.05;my+=(ty-my)*.05;g.uniform2f(ur,c.width,c.height);g.uniform1f(ut,t/1000);g.uniform2f(um,mx,my);g.drawArrays(g.TRIANGLE_STRIP,0,4)}}requestAnimationFrame(f)}})(0)}})();</script>
+{JS_BASE}{wa_js(o)}</body></html>'''
+write('pink-code',html)
